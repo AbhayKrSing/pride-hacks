@@ -1,21 +1,15 @@
 
 import './App.css';
-import React, { useState } from "react";
-import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
-import img from './lib/images/frankie-knuckles.jpeg';
+import React from "react";
 import Puzzle1 from './components/Puzzle1';
 
 function App() {
-  const [solveText, setSolveText] = useState("unscramble the puzzle");
-
-  const setText = () => (setSolveText("You got it!"));
 
   return (
     <>
-    <div className="App">
-
-      <Puzzle1 />
-    </div>
+      <div className="App">
+        <Puzzle1 />
+      </div>
     </>
   );
 }

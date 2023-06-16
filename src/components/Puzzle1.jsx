@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import img from '../lib/images/frankie-knuckles.jpeg';
-
+import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
 function Puzzle1() {
     const [solveText, setSolveText] = useState("unscramble the puzzle");
 
