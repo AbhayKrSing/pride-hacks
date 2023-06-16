@@ -1,13 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React, { useState } from "react";
+import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
+import img from './lib/images/frankie-knuckles.jpeg';
+import Puzzle1 from './components/Puzzle1';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+  const [solveText, setSolveText] = useState("unscramble the puzzle");
 
-      </header>
+  const setText = () => (setSolveText("You got it!"));
+
+  return (
+    <>
+    <div className="App">
+
+      <Puzzle1 />
     </div>
+    </>
   );
 }
 
