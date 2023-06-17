@@ -4,34 +4,25 @@ import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import img from '../lib/images/frankie-knuckles.jpeg';
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
 import './puzzle.css';
-
+import SpotifyPlayer from 'react-spotify-player';
+import { songURIs } from "../songUris";
 
 function Puzzle1() {
     const [solveText, setSolveText] = useState("unscramble the puzzle");
    
     const [isSolved, setSolved] = useState(false);
-  
-    const [token, setToken] = useState('');
-
-    useEffect(() => {
-  
-      async function getToken() {
-        const response = await fetch('/auth/token');
-        const json = await response.json();
-        setToken(json.access_token);
-      }
-  
-      getToken();
-    }, []);
 
     function puzzleSolved() {
         setSolveText("You got it!");
         setSolved(true);
     }
 
-    // function showSolution() {
-    //     return JigsawPuzzle.onSolutionButton()
-    // }
+    const size = {
+        width: '100%',
+        height: 300,
+        };
+        const view = 'coverart'; // or 'list'
+        const theme = 'black'; // or 'white'
 
     return(
         <>
@@ -48,7 +39,14 @@ function Puzzle1() {
                 <p>Frankie Knuckles is often labeled as the father of house music, 
                     named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
                 </p>
-
+                <SpotifyPlayer
+                uri={songURIs.frankieKnucklesURI}
+                size="compact"
+                view={view}
+                theme={theme}
+                />
+                <button>Next</button>
+                <button>Home</button>
             </div>
         </>
     )
