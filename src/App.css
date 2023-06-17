@@ -53,3 +53,15 @@ body {
 .scrolled {
   font-family: woro sans;
 }
+
+.img-1,
+.img-2,
+.img-3 {
+  height: 250px;
+  border-radius: 5px;
+}
+
+.newFont {
+  font-family: sans-serif;
+  font-size: 3rem;
+}
