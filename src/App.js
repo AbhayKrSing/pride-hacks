@@ -1,23 +1,36 @@
 
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Puzzle1 from './components/Puzzle1';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PuzzlePage from './components/PuzzlePage';
+
 
 function App() {
 
   return (
     <>
     <Router>
-      <div className="App">
+    <Routes>
         <Route
-          path="/musicians"
+          path="/"
         />
         <Route
-          path="/musicians"
+          path="/musicians/1"
+          
         />
-        <Puzzle1 />
-      </div>
+        <Route
+          path="/musicians/:currentId"
+          element={<PuzzlePage />}
+        />
+        <Route
+          path="/leaders"
+        />
+        <Route
+          path="/leaders/:id"
+        />
+      
+    
+    </Routes>
     </Router>
     </>
   );
