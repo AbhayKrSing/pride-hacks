@@ -1,15 +1,16 @@
 
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import PuzzlePage from './components/PuzzlePage';
 
+import { Routes, Route } from "react-router-dom";
+import PuzzlePage from './components/PuzzlePage';
+import Welcome from './components/Welcome'
 
 function App() {
 
   return (
     <>
-    <Router>
+
     <Routes>
         <Route
           path="/"
@@ -28,11 +29,9 @@ function App() {
         <Route
           path="/leaders/:id"
         />
-      
     
     </Routes>
-    </Router>
-    </>
+</>
   );
 }
 
