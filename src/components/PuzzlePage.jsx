@@ -64,7 +64,7 @@ function PuzzlePage() {
             </div>
             <div className="navButtons">
                 <button onClick={ ()=> navigate(`/musicians/${nextId}`)}>Next</button>
-                <button>Home</button>
+                <button onClick={ ()=> navigate(`/`)}>Home</button>
             </div>
         </>
     )
