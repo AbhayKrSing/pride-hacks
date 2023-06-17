@@ -1,18 +1,19 @@
 
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Puzzle1 from './components/Puzzle1';
-
+import Welcome from './components/Welcome'
 function App() {
 
   return (
     <>
-    <Router>
       <div className="App">
-        <Puzzle1 />
+        <Routes>
+          <Route path='/puzzle' element={<Puzzle1 />} />
+          <Route path='/' element={<Welcome />}></Route>
+        </Routes>
       </div>
-    </Router>
     </>
   );
 }
