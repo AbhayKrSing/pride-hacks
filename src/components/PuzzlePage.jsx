@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import img from '../lib/images/frankie-knuckles.jpeg';
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
@@ -8,20 +8,22 @@ import './puzzle.css';
 import SpotifyPlayer from 'react-spotify-player';
 import { musicians } from "../musiciansHelper";
 
-function Puzzle1() {
+function PuzzlePage() {    
 
-    const params = useParams();
-    const nextId = params + 1;
+    const params = useParams();    
+    console.log('params', params.id);
+    let nextId = Number(params.id) + 1;
+    console.log(nextId);
+    const navigate = useNavigate();
 
     // hooks
     const [solveText, setSolveText] = useState("unscramble the puzzle");
     const [isSolved, setSolved] = useState(false);
-    const [musician, setMusician] = useState({});
 
     useEffect(() => {
-        console.log('in use effect')
-        setMusician(musicians[params]);
-        console.log(musician);
+        console.log('params', params);
+        
+        console.log(nextId); 
     }, [params])
 
     // functions
@@ -53,20 +55,19 @@ function Puzzle1() {
                 <p>Frankie Knuckles is often labeled as the father of house music, 
                     named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
                 </p>
-                <p>{params}</p>
                 <SpotifyPlayer
-                uri={musician.URI}
+                uri={musicians[nextId]}
                 size="compact"
                 view={view}
                 theme={theme}
                 />
             </div>
             <div className="navButtons">
-                <button><Link to={`/musicians/${nextId}`} /> Next</button>
+                <button onClick={ ()=> navigate(`/musicians/${nextId}`)}>Next</button>
                 <button>Home</button>
             </div>
         </>
     )
 }
     
-export default Puzzle1;
+export default PuzzlePage;
