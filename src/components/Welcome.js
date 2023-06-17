@@ -24,7 +24,7 @@ const Welcome = () => {
             <section className="py-10">
                 <div className="container mx-auto">
                     <div className='text-center'>
-                        <button class="text-3xl font-bold mb-6 text-center text-black-500 py-2 px-4 rounded-lg cursor-default newFont">Inspirations</button>
+                        <button className="text-3xl font-bold mb-6 text-center text-black-500 py-2 px-4 rounded-lg cursor-default newFont">Inspirations</button>
                     </div>
 
 
@@ -32,21 +32,21 @@ const Welcome = () => {
                         <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
                             <img src="https://th.bing.com/th/id/R.3db6b29844232e0a26cdae7954ab4054?rik=ZXQ9kv%2f5tnZy9Q&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpuzzle-png-hd-jigsaw-puzzle-hd-png-clipart-image-01-199x210-jigsaw-puzzle-png-transparent-free-images-1456.png&ehk=ZLo%2fy2ht7ptOD%2f88Ybna0rqIjB35qRZO0D4mgZ%2fFvSM%3d&risl=&pid=ImgRaw&r=0" alt="Community Story 1" height={500} width={300} className='mx-auto img-1' />
                             <div className="p-3 text-center mt-14">
-                                <button class=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Try out puzzles</button>
+                                <button className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Try out puzzles</button>
 
                             </div>
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
                             <img src="https://th.bing.com/th/id/OIP.-DZs7WGXsOIoKuQm8uu7PgHaEs?pid=ImgDet&rs=1" alt="Community Story 2" className='mx-auto img-2' height={100} width={600} />
                             <div className="p-3 text-center">
-                                <button class=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Famous LGBT historical figures</button>
+                                <button className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Famous LGBT historical figures</button>
 
                             </div>
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
                             <img src="https://thumbs.dreamstime.com/b/rainbow-music-background-means-colorful-lines-melody-meaning-42077248.jpg" alt="Community Story 3" className='mx-auto img-3' height={100} width={600} />
                             <div className="p-3 text-center">
-                                <button class=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Influential LGBT musicians</button>
+                                <button className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Influential LGBT musicians</button>
 
                             </div>
                         </div>
