@@ -13,3 +13,43 @@
   margin: auto;
   box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
 }
+
+@keyframes rainbowAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body {
+  background: linear-gradient(60deg, #f56565, #f6ad55, #fde047, #48bb78, #4299e1, #9f7aea, #ed64a6);
+  background-size: 200% 200%;
+  animation: rainbowAnimation 3s ease-in-out infinite;
+}
+
+.animated-image {
+  animation: PopUpImage 1s linear 1;
+}
+
+@keyframes PopUpImage {
+  0% {
+    width: 100px;
+    margin: auto;
+  }
+
+  100% {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.change-font-family {
+  transition: font-family 0.5s ease;
+}
+
+.scrolled {
+  font-family: woro sans;
+}
