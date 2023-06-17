@@ -45,6 +45,9 @@ function Puzzle1() {
                 view={view}
                 theme={theme}
                 />
+
+            </div>
+            <div className="navButtons">
                 <button>Next</button>
                 <button>Home</button>
             </div>
