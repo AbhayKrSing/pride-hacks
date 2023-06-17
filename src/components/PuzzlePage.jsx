@@ -11,9 +11,8 @@ import { musicians } from "../musiciansHelper";
 function PuzzlePage() {    
 
     const params = useParams();    
-    console.log('params', params.id);
-    let nextId = Number(params.id) + 1;
-    console.log(nextId);
+    console.log(params);
+    let nextId;
     const navigate = useNavigate();
 
     // hooks
@@ -21,9 +20,8 @@ function PuzzlePage() {
     const [isSolved, setSolved] = useState(false);
 
     useEffect(() => {
-        console.log('params', params);
-        
-        console.log(nextId); 
+        nextId = Number(params.id) + 1;
+        console.log(nextId);
     }, [params])
 
     // functions
@@ -56,7 +54,7 @@ function PuzzlePage() {
                     named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
                 </p>
                 <SpotifyPlayer
-                uri={musicians[nextId]}
+                uri="spotify:track:0vryyKyxCFXT0gg670yNEw"
                 size="compact"
                 view={view}
                 theme={theme}
