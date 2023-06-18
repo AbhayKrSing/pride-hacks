@@ -38,8 +38,8 @@ const Welcome = () => {
                             </div>
                         </div> */}
                         <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-                            <img src={josephineB} 
-                            alt="Community Story 2" className='mx-auto img-2' height={100} width={600} />
+                            <img src={josephineB}  
+                            alt="Community Story 2" className='mx-auto img-2' height={100} width={600} aspect-ratio={1200 / 630}/>
                             <div className="p-3 text-center">
                                 <button disabled className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">
                                     Famous LGBT historical figures
