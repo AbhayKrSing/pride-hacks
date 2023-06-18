@@ -13,7 +13,7 @@ body {
 
 /* for the jigsaw puzzle container */
 .jigsaw-puzzle {
-  width: 80vw;
+  width: 70vw;
   aspect-ratio: 1 / 1;
   border: 2px solid black;
   margin: auto;

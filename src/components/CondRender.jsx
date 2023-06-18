@@ -37,7 +37,7 @@ function CondRender() {
             setSolved(true);
         }
 
-            // spotify player props
+    // spotify player props
     // const size = {
     //     width: '100%',
     //     height: 300,
@@ -70,7 +70,6 @@ function CondRender() {
                     >Frankie Knuckles is often labeled as the father of house music, 
                         named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
                 </p>
-                
                 <SpotifyPlayer
                 uri={musician}
                 size="compact"
