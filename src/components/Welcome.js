@@ -1,5 +1,6 @@
 import React from 'react';
 import LGBTHeart from '../lib/images/LGBT-heart.png';
+import josephineB from '../lib/images/josephine-baker.jpg';
 
 const Welcome = () => {
 
@@ -37,7 +38,7 @@ const Welcome = () => {
                             </div>
                         </div> */}
                         <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
-                            <img src="https://th.bing.com/th/id/OIP.-DZs7WGXsOIoKuQm8uu7PgHaEs?pid=ImgDet&rs=1" 
+                            <img src={josephineB} 
                             alt="Community Story 2" className='mx-auto img-2' height={100} width={600} />
                             <div className="p-3 text-center">
                                 <button disabled className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">
