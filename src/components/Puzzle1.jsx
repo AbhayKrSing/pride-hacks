@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import img from '../lib/images/frank-ocean.jpg';
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
@@ -17,10 +17,10 @@ function Puzzle1() {
         setSolved(true);
     }
 
-    const size = {
-        width: '100%',
-        height: 300,
-        };
+    // const size = {
+    //     width: '100%',
+    //     height: 300,
+    //     };
         const view = 'coverart'; // or 'list'
         const theme = 'black'; // or 'white'
 

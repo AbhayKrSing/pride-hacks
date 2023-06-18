@@ -3,7 +3,7 @@ import './App.css';
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import PuzzlePage from './components/PuzzlePage';
-import Puzzle1 from './components/Puzzle1';
+// import Puzzle1 from './components/Puzzle1';
 import Welcome from './components/Welcome'
 
 function App() {
@@ -25,18 +25,19 @@ function App() {
 
   return (
     <>
-    <Routes>
+
+      <Routes>
         <Route
-          path="/"
+          path="/" element={<Welcome />}
         />
         <Route path="/musicians/:id" element={<PuzzlePage />} />
 
         <Route
           path="/leaders/:id"
         />
-  
-    </Routes>
-</>
+
+      </Routes>
+    </>
   );
 }
 
