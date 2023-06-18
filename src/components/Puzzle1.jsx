@@ -6,17 +6,30 @@ import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
 import './puzzle.css';
 import SpotifyPlayer from 'react-spotify-player';
 import { songURIs } from "../songUris";
+import { musicians } from "../musiciansHelper";
+
 
 function Puzzle1() {
     const [solveText, setSolveText] = useState("unscramble the puzzle");
    
     const [isSolved, setSolved] = useState(false);
 
+    const params = useParams();    
+    let nextId;
+    let musician=musicians[params.id-1];
+    const navigate = useNavigate();
+
     function puzzleSolved() {
         setSolveText("You got it!");
         setSolved(true);
     }
 
+    useEffect(() => {
+        nextId = Number(params.id) + 1;
+
+        setSolved(false);
+    }, [params])
+    
     // const size = {
     //     width: '100%',
     //     height: 300,
@@ -42,7 +55,7 @@ function Puzzle1() {
                     and his two studio albums have been listed on Rolling Stone's 500 Greatest Albums of All Time (2020). 
                 </p>
                 <SpotifyPlayer
-                uri={songURIs.frankieKnucklesURI}
+                uri={musician}
                 size="compact"
                 view={view}
                 theme={theme}
