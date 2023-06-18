@@ -49,9 +49,20 @@ function PuzzlePage() {
             />
             {/* <button onClick={showSolution()}>Show Solution</button> */}
             <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-                <p>Frankie Knuckles is often labeled as the father of house music, 
-                    named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
-                </p>
+                <p style={{
+        backgroundColor: '#f5f5f5',
+        padding: '20px',
+        borderRadius: '10px',
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+      }}>
+    <span  style={{
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '16px',
+          color: '#333',
+        }}>
+        Frankie Knuckles is often labeled as the father of house music, named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
+    </span>
+</p>
                 <SpotifyPlayer
                 uri="spotify:track:0vryyKyxCFXT0gg670yNEw"
                 size="compact"
