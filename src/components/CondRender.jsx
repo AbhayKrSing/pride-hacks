@@ -26,6 +26,7 @@ function CondRender() {
         const [animationClass, setAnimationClass] = useState('');
 
         useEffect(() => {
+            setSolveText("Unscramble the puzzle to hear their music!");
             nextId = Number(params.id) + 1;
             console.log('next id:', nextId);
             setSolved(false);
