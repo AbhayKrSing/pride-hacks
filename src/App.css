@@ -27,7 +27,7 @@
 body {
   background: linear-gradient(60deg, #f56565, #f6ad55, #fde047, #48bb78, #4299e1, #9f7aea, #ed64a6);
   background-size: 200% 200%;
-  animation: rainbowAnimation 3s ease-in-out infinite;
+  animation: rainbowAnimation 6s ease-in-out infinite;
 }
 
 .animated-image {

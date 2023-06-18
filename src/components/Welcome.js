@@ -1,12 +1,16 @@
 import React from 'react'
 import LGBTHeart from '../lib/images/LGBT-heart.png'
+import { useNavigate } from 'react-router'
 const Welcome = () => {
+    const navigate = useNavigate()
+    const handleclick = (id) => {
+        navigate(`/musicians/` + id)
+    }
     return (
         <>
             <header className="bg-indigo-700 text-white text-center py-8">
                 <h1 className="text-4xl font-bold">Welcome to Pridezzles</h1>
             </header>
-
             <div className="container mx-auto my-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-[75vh]">
                     <div className='ml-4'>
@@ -32,7 +36,7 @@ const Welcome = () => {
                         <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
                             <img src="https://th.bing.com/th/id/R.3db6b29844232e0a26cdae7954ab4054?rik=ZXQ9kv%2f5tnZy9Q&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpuzzle-png-hd-jigsaw-puzzle-hd-png-clipart-image-01-199x210-jigsaw-puzzle-png-transparent-free-images-1456.png&ehk=ZLo%2fy2ht7ptOD%2f88Ybna0rqIjB35qRZO0D4mgZ%2fFvSM%3d&risl=&pid=ImgRaw&r=0" alt="Community Story 1" height={500} width={300} className='mx-auto img-1' />
                             <div className="p-3 text-center mt-14">
-                                <button className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md">Try out puzzles</button>
+                                <button className=" bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-md" onClick={() => { handleclick(1) }}>Try out puzzles</button>
 
                             </div>
                         </div>
