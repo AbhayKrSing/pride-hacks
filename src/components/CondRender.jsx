@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
 import './puzzle.css';
@@ -8,14 +8,14 @@ import { musicians } from "../musiciansHelper";
 import img1 from '../lib/images/frankie-knuckles.jpeg';
 import img2 from '../lib/images/frank-ocean.jpg';
 import img3 from '../lib/images/tracy-chapman.jpg';
-import img4 from '../lib/images/prince.jpg';
-import img5 from '../lib/images/queen-freddie-mercury.jpg';
-import img6 from '../lib/images/lil-nas-x.jpg';
+// import img4 from '../lib/images/sza.jpg'
+// import img5 from '../lib/images/queen-freddie-mercury.jpg';
+// import img6 from '../lib/images/lil-nas-x.jpg';
 
 function CondRender() {
 
     const params = useParams();    
-    console.log(params)
+    console.log(img4)
     let nextId;
     let musician=musicians[params.id-1];
     const navigate = useNavigate();
@@ -100,7 +100,9 @@ function CondRender() {
         onSolved={()=>puzzleSolved()}
         className="jigsaw-puzzle" /> 
         <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-            <p>Janelle Mon
+            <p>Tracy Chapman is an American singer-songwriter and guitarist. She is best known for her self-titled debut album, which was released in 1988. 
+            Over the course of her career Tracy Chapman has won numerous awards including four Grammy Awards and four MTV Video Music Awards.
+             She was also inducted into the Rock & Roll Hall of Fame in 2005. Tracy Chapman continues to tour and perform around the world.
             </p>
         </div>
             <SpotifyPlayer
@@ -110,69 +112,76 @@ function CondRender() {
         theme={theme}
         />
     </div>)
-    } else if (params === '4') {
+    }else if (params.id >= '4') {
         return (
-        <div>
-        <JigsawPuzzle
-        imageSrc={img4}
-        rows={3}
-        columns={3}
-        onSolved={()=>puzzleSolved()}
-        className="jigsaw-puzzle" /> 
-        <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-            <p>Frankie Knuckles is often labeled as the father of house music, 
-                named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
-            </p>
-        </div>
-            <SpotifyPlayer
-        uri={musician}
-        size="compact"
-        view={view}
-        theme={theme}
-        />
-    </div>)
-    } else if (params === '5') {
-        return (
-        <div>
-        <JigsawPuzzle
-        imageSrc={img5}
-        rows={3}
-        columns={3}
-        onSolved={()=>puzzleSolved()}
-        className="jigsaw-puzzle" /> 
-        <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-            <p>Frankie Knuckles is often labeled as the father of house music, 
-                named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
-            </p>
-        </div>
-            <SpotifyPlayer
-        uri={musician}
-        size="compact"
-        view={view}
-        theme={theme}
-        />
-    </div>)
-    } else if (params === '6') {
-        return (
-        <div>
-        <JigsawPuzzle
-        imageSrc={img6}
-        rows={3}
-        columns={3}
-        onSolved={()=>puzzleSolved()}
-        className="jigsaw-puzzle" /> 
-        <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-            <p>Frankie Knuckles is often labeled as the father of house music, 
-                named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
-            </p>
-        </div>
-            <SpotifyPlayer
-        uri={musician}
-        size="compact"
-        view={view}
-        theme={theme}
-        />
-    </div>)
+            <>
+            <h1>You completed all the Puzzles!</h1>
+            </>
+        )
+    // } else if (params === '4') {
+    //     return (
+    //     <div>
+    //     <JigsawPuzzle
+    //     imageSrc='/static/media/prince.71431f1a620552cbe5e0.jpg'
+        
+    //     rows={3}
+    //     columns={3}
+    //     onSolved={()=>puzzleSolved()}
+    //     className="jigsaw-puzzle" /> 
+    //     <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
+    //         <p>Frankie Knuckles is often labeled as the father of house music, 
+    //             named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
+    //         </p>
+    //     </div>
+    //         <SpotifyPlayer
+    //     uri={musician}
+    //     size="compact"
+    //     view={view}
+    //     theme={theme}
+    //     />
+    // </div>)
+    // } else if (params === '5') {
+    //     return (
+    //     <div>
+    //     <JigsawPuzzle
+    //     imageSrc={img5}
+    //     rows={3}
+    //     columns={3}
+    //     onSolved={()=>puzzleSolved()}
+    //     className="jigsaw-puzzle" /> 
+    //     <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
+    //         <p>Frankie Knuckles is often labeled as the father of house music, 
+    //             named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
+    //         </p>
+    //     </div>
+    //         <SpotifyPlayer
+    //     uri={musician}
+    //     size="compact"
+    //     view={view}
+    //     theme={theme}
+    //     />
+    // </div>)
+    // } else if (params === '6') {
+    //     return (
+    //     <div>
+    //     <JigsawPuzzle
+    //     imageSrc={img6}
+    //     rows={3}
+    //     columns={3}
+    //     onSolved={()=>puzzleSolved()}
+    //     className="jigsaw-puzzle" /> 
+    //     <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
+    //         <p>Frankie Knuckles is often labeled as the father of house music, 
+    //             named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
+    //         </p>
+    //     </div>
+    //         <SpotifyPlayer
+    //     uri={musician}
+    //     size="compact"
+    //     view={view}
+    //     theme={theme}
+    //     />
+    // </div>)
     }
 }
 
