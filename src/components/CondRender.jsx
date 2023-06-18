@@ -15,7 +15,7 @@ import img3 from '../lib/images/tracy-chapman.jpg';
 function CondRender() {
 
     const params = useParams();    
-    console.log(img4)
+    console.log(params)
     let nextId;
     let musician=musicians[params.id-1];
     const navigate = useNavigate();
@@ -23,10 +23,11 @@ function CondRender() {
         // hooks
         const [solveText, setSolveText] = useState("Unscramble the puzzle");
         const [isSolved, setSolved] = useState(false);
-    
+        const [animationClass, setAnimationClass] = useState('');
+
         useEffect(() => {
             nextId = Number(params.id) + 1;
-    
+            console.log('next id:', nextId)
             setSolved(false);
         }, [params])
     
@@ -47,7 +48,12 @@ function CondRender() {
  
     if ( params.id === '1') {
         return (
-        <div>
+        <div       style={{
+            backgroundColor: '#f5f5f5',
+            padding: '20px',
+            borderRadius: '10px',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+          }}>
                     <JigsawPuzzle
                     imageSrc={img1}
                     rows={3}
@@ -55,7 +61,14 @@ function CondRender() {
                     onSolved={()=>puzzleSolved()}
                     className="jigsaw-puzzle" /> 
                     <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-                        <p>Frankie Knuckles is often labeled as the father of house music, 
+                    <p
+        className={`animated-text ${animationClass}`}
+        style={{
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '16px',
+          color: '#333',
+        }}
+                        >Frankie Knuckles is often labeled as the father of house music, 
                             named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
                         </p>
                     </div>
@@ -69,7 +82,12 @@ function CondRender() {
     }
     else if (params.id === '2' ) {
         return (
-        <div>
+        <div       style={{
+            backgroundColor: '#f5f5f5',
+            padding: '20px',
+            borderRadius: '10px',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+          }}>
             <JigsawPuzzle
             imageSrc={img2}
             rows={3}
@@ -77,7 +95,14 @@ function CondRender() {
             onSolved={()=>puzzleSolved()}
             className="jigsaw-puzzle" /> 
             <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-                <p>Frank Ocean is  is an American singer, songwriter, and rapper. His works are noted by music critics for 
+                <p
+                  className={`animated-text ${animationClass}`}
+                  style={{
+                    fontFamily: 'Arial, sans-serif',
+                    fontSize: '16px',
+                    color: '#333',
+                  }}
+                >Frank Ocean is  is an American singer, songwriter, and rapper. His works are noted by music critics for 
             featuring avant-garde styles and introspective, elliptical lyrics. He has won two Grammy Awards
              and a Brit Award for International Male Solo Artist among other accolades, 
             and his two studio albums have been listed on Rolling Stone's 500 Greatest Albums of All Time (2020). 
@@ -92,7 +117,12 @@ function CondRender() {
         </div>)
     } else if (params.id === '3') {
         return (
-        <div>
+        <div       style={{
+            backgroundColor: '#f5f5f5',
+            padding: '20px',
+            borderRadius: '10px',
+            boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+          }}>
         <JigsawPuzzle
         imageSrc={img3}
         rows={3}
@@ -100,7 +130,14 @@ function CondRender() {
         onSolved={()=>puzzleSolved()}
         className="jigsaw-puzzle" /> 
         <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-            <p>Tracy Chapman is an American singer-songwriter and guitarist. She is best known for her self-titled debut album, which was released in 1988. 
+            <p
+              className={`animated-text ${animationClass}`}
+              style={{
+                fontFamily: 'Arial, sans-serif',
+                fontSize: '16px',
+                color: '#333',
+              }}
+              >Tracy Chapman is an American singer-songwriter and guitarist. She is best known for her self-titled debut album, which was released in 1988. 
             Over the course of her career Tracy Chapman has won numerous awards including four Grammy Awards and four MTV Video Music Awards.
              She was also inducted into the Rock & Roll Hall of Fame in 2005. Tracy Chapman continues to tour and perform around the world.
             </p>
