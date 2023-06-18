@@ -31,7 +31,6 @@ function App() {
           path="/" element={<Welcome />}
         />
         <Route path="/musicians/:id" element={<PuzzlePage />} />
-
         <Route
           path="/leaders/:id"
         />
