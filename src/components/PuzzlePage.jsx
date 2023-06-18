@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
@@ -16,7 +15,7 @@ function PuzzlePage() {
     const navigate = useNavigate();
 
     // hooks
-    const [solveText, setSolveText] = useState("unscramble the puzzle");
+    const [solveText, setSolveText] = useState("Unscramble the puzzle");
     const [isSolved, setSolved] = useState(false);
 
     useEffect(() => {
@@ -39,8 +38,8 @@ function PuzzlePage() {
         const theme = 'black'; // or 'white'
 
     return(
-        <>
-            <h2>{solveText}</h2>
+        <>  <header></header>
+           <h2 style={{fontSize: "36px", color: "#333", textShadow: "2px 2px 4px rgba(0,0,0,0.5)",textAlign:'center'}}>{solveText}</h2>
             <JigsawPuzzle
             imageSrc={img}
             rows={3}
@@ -60,9 +59,10 @@ function PuzzlePage() {
                 theme={theme}
                 />
             </div>
-            <div className="navButtons">
-                <button onClick={ ()=> navigate(`/musicians/${nextId}`)}>Next</button>
-                <button onClick={ ()=> navigate(`/`)}>Home</button>
+            <div className="navButtons h-[15vh] text-center space-x-2 mt-5">
+             <button style={{fontSize: "24px", padding: "10px 20px", backgroundColor: "#f44336", color: "#fff", border: "none", borderRadius: "5px", boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)"}} onClick={() => navigate(`/`)}>Home</button>
+
+                <button style={{fontSize: "24px", padding: "10px 20px", backgroundColor: "#f44336", color: "#fff", border: "none", borderRadius: "5px", boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)"}} onClick={ ()=> navigate(`/musicians/${nextId}`)}>Next</button>
             </div>
         </>
     )
