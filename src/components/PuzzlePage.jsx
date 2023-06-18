@@ -2,13 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
-import { mtImage } from "../test";
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
 import './puzzle.css';
 import SpotifyPlayer from 'react-spotify-player';
 import { musicians } from "../musiciansHelper";
-// import img from '../lib/images/frankie-knuckles.jpeg';
-
+import img from '../lib/images/frankie-knuckles.jpeg';
 
 function PuzzlePage() {    
 
@@ -16,17 +14,14 @@ function PuzzlePage() {
     let nextId;
     let musician=musicians[params.id-1];
     const navigate = useNavigate();
-    nextId = Number(params.id) + 1;
-    let img = mtImage[params.id].toString();
-    console.log(typeof(img))
 
     // hooks
     const [solveText, setSolveText] = useState("unscramble the puzzle");
     const [isSolved, setSolved] = useState(false);
 
     useEffect(() => {
-        // nextId = Number(params.id) + 1;
-        // img = mtImage[nextId];
+        nextId = Number(params.id) + 1;
+        console.log(img)
 
         setSolved(false);
     }, [params])
@@ -48,11 +43,8 @@ function PuzzlePage() {
     return(
         <>
             <h2>{solveText}</h2>
-            
             <JigsawPuzzle
-            // imageSrc={require(`../lib/images/frank-ocean.jpg`)}
-            imageSrc={ require( `${img}` )}
-
+            imageSrc={img}
             rows={3}
             columns={3}
             onSolved={()=>puzzleSolved()}

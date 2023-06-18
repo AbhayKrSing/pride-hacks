@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
-import img from '../lib/images/frankie-knuckles.jpeg';
+import img from '../lib/images/frank-ocean.jpg';
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
 import './puzzle.css';
 import SpotifyPlayer from 'react-spotify-player';
@@ -36,8 +36,10 @@ function Puzzle1() {
             />
             {/* <button onClick={showSolution()}>Show Solution</button> */}
             <div className={isSolved?"solvedMessage shown":"solvedMessage hidden"}>
-                <p>Frankie Knuckles is often labeled as the father of house music, 
-                    named after Chicago club the Warehouse, where Knuckles played regularly since 1977.
+                <p>Frank Ocean is  is an American singer, songwriter, and rapper. His works are noted by music critics for 
+                    featuring avant-garde styles and introspective, elliptical lyrics. He has won two Grammy Awards
+                     and a Brit Award for International Male Solo Artist among other accolades, 
+                    and his two studio albums have been listed on Rolling Stone's 500 Greatest Albums of All Time (2020). 
                 </p>
                 <SpotifyPlayer
                 uri={songURIs.frankieKnucklesURI}

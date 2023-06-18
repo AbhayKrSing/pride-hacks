@@ -1,6 +1,5 @@
 export const mtImage = [
-    {id: 1, img:
-    '../lib/images/frankie-knuckles.jpeg'},
+    '../lib/images/frankie-knuckles.jpeg',
     '../lib/images/frank-ocean.jpg',
     '../lib/images/tracey-chapman.jpg',
     '../lib/images/prince.jpg',
